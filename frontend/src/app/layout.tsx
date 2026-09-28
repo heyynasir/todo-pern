@@ -6,8 +6,8 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'PERN Production Todo Application',
-  description: 'Production level Full-Stack PERN (PostgreSQL, Express, React, Node.js) Todo Application with Raw SQL',
+  title: 'TODO APP - Production Task Manager',
+  description: 'Production level Full-Stack Todo Application built with Next.js, Express, and PostgreSQL',
 };
 
 export default function RootLayout({

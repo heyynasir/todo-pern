@@ -1,5 +1,5 @@
 // -------------------------------------------------------------
-// TYPESCRIPT INTERFACES FOR PERN TODO FRONTEND
+// TYPESCRIPT INTERFACES FOR TODO APP FRONTEND
 // -------------------------------------------------------------
 
 // Todo Priority Enum Level

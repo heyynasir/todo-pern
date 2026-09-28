@@ -67,7 +67,7 @@ export default function RegisterPage() {
           Create an Account
         </h2>
         <p className="mt-2 text-center text-sm text-slate-400">
-          Join PERN Todo to manage your high-priority tasks
+          Join TODO APP to organize and manage your daily tasks
         </p>
       </div>
 

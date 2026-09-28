@@ -2,7 +2,7 @@
 
 // Next.js Link aur React Icons import kar rahe hain
 import Link from 'next/link';
-import { HiCheckCircle, HiArrowRightOnRectangle, HiUserCircle } from 'react-icons/hi2';
+import { HiCheckCircle, HiArrowRightOnRectangle } from 'react-icons/hi2';
 import { logoutUser } from '../services/auth.service';
 import { User } from '../types';
 
@@ -22,10 +22,10 @@ export default function Navbar({ user }: NavbarProps) {
           </div>
           <div className="flex flex-col">
             <span className="text-lg font-bold tracking-tight text-white group-hover:text-indigo-300">
-              PERN<span className="text-indigo-400">Todo</span>
+              TODO<span className="text-indigo-400"> APP</span>
             </span>
             <span className="text-[10px] font-medium tracking-widest text-slate-400 uppercase">
-              Production Stack
+              Task Manager
             </span>
           </div>
         </Link>

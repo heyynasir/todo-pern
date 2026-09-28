@@ -8,7 +8,6 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    // Check kar rahe hain ki user logged in hai ya nahi
     const token = typeof window !== 'undefined' ? localStorage.getItem('token') : null;
 
     if (token) {
@@ -23,7 +22,7 @@ export default function Home() {
       <div className="flex flex-col items-center gap-3">
         <div className="h-10 w-10 animate-spin rounded-full border-4 border-indigo-500 border-t-transparent" />
         <p className="text-xs font-semibold tracking-wider text-slate-400 uppercase">
-          Redirecting to PERN Todo...
+          Redirecting to Todo App...
         </p>
       </div>
     </div>

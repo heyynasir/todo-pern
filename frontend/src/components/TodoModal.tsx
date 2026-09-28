@@ -2,7 +2,7 @@
 
 // Hooks, Icons, Types, aur Toasts import kar rahe hain
 import { useState, useEffect } from 'react';
-import { HiXMark, HiPlus, HiPencilSquare, HiCalendar } from 'react-icons/hi2';
+import { HiXMark, HiPlus, HiPencilSquare } from 'react-icons/hi2';
 import { Todo, PriorityLevel } from '../types';
 
 interface TodoModalProps {
@@ -109,7 +109,7 @@ export default function TodoModal({ isOpen, onClose, onSubmit, initialData }: To
               required
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              placeholder="e.g., Complete PERN Backend APIs"
+              placeholder="e.g., Complete project documentation"
               className="mt-2 block w-full rounded-xl border border-slate-800 bg-slate-950 py-3 px-4 text-sm text-white placeholder-slate-500 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
             />
           </div>

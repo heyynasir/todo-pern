@@ -62,7 +62,7 @@ export default function LoginPage() {
           Welcome back
         </h2>
         <p className="mt-2 text-center text-sm text-slate-400">
-          Sign in to manage your PERN Todo tasks
+          Sign in to manage your Todo tasks
         </p>
       </div>
 
