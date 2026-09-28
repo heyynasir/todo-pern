@@ -1,10 +1,10 @@
 import { z } from 'zod';
 
 // -------------------------------------------------------------
-// CREATE TODO VALIDATION SCHEMA (ROBUST DATE HANDLING)
+// CREATE TODO VALIDATION SCHEMA (PRODUCTION TS COMPLIANT)
 // -------------------------------------------------------------
 export const createTodoSchema = z.object({
-  title: z.string({ required_error: 'Todo title is required' }).min(1, 'Title cannot be empty'),
+  title: z.string().min(1, 'Title cannot be empty'),
   description: z.string().optional().nullable(),
   priority: z.enum(['LOW', 'MEDIUM', 'HIGH']).optional().default('MEDIUM'),
   category: z.string().optional().default('General'),
