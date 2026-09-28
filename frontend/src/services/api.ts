@@ -1,17 +1,24 @@
 // Axios HTTP client library import kar rahe hain
 import axios from 'axios';
 
-// Dynamic API Base URL helper (PC + Mobile Network Testing Support)
+// Dynamic API Base URL helper (Localhost + Local IP + Production Cloud Fallback)
 const getApiBaseUrl = (): string => {
+  // 1. Explicit Environment Variable (if configured)
   if (process.env.NEXT_PUBLIC_API_URL) {
     return process.env.NEXT_PUBLIC_API_URL;
   }
+
+  // 2. Client-side dynamic environment detection
   if (typeof window !== 'undefined') {
-    // Mobile par open hone par window.location.hostname PC ki Network IP (10.232.167.195) auto-detect kar lega!
     const host = window.location.hostname;
-    return `http://${host}:8080/api`;
+    // Local development (PC localhost or Mobile Wi-Fi IP)
+    if (host === 'localhost' || host === '127.0.0.1' || host.startsWith('10.') || host.startsWith('192.168.')) {
+      return `http://${host}:8080/api`;
+    }
   }
-  return 'http://localhost:8080/api';
+
+  // 3. Production Live Render Backend URL Default Fallback
+  return 'https://todo-pern-1ozp.onrender.com/api';
 };
 
 // Axios Custom Instance create kar rahe hain
@@ -22,7 +29,7 @@ const api = axios.create({
   },
 });
 
-// Update baseURL dynamically on request execution for client rendering
+// Update baseURL dynamically on each request
 api.interceptors.request.use(
   (config) => {
     config.baseURL = getApiBaseUrl();
